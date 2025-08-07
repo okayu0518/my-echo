@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-echo
-        image: okayu0518/my-echo:20240712
+        image: ysakashita/my-echo:20231108
 ---
 apiVersion: v1
 kind: Service
@@ -40,13 +40,6 @@ spec:
       paths:
       - pathType: Prefix
         path: "/"
-        backend:
-          service:
-            name: my-echo
-            port: 
-              number: 1323
-      - pathType: Prefix
-        path: "/ping"
         backend:
           service:
             name: my-echo
